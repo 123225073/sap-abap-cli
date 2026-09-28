@@ -102,6 +102,16 @@ SAP ABAP 上线前代码审查 AI Agent Skill。对 **9 个维度**进行安全�
 
 ---
 
+## 参考文档
+
+独立于具体 Skill 的跨项目指南位于 [`docs/`](docs/)：
+
+| 文档 | 说明 |
+|---|---|
+| [`docs/authentication/`](docs/authentication/) | SAP↔AI 对接（CLI / MCP / OData）认证参考手册：决策树、各方式优缺点详解与 Basic、SPNEGO、X.509、OIDC/OAuth2、边界网关、客户端模式的逐步落地方案。本目录为同步副本，权威版本在 `sap-functional-skill` 仓库维护 |
+
+---
+
 ## 仓库结构
 
 ```
@@ -114,6 +124,7 @@ sap-engineering-skill/
 ├── .github/workflows/tests.yml       ← CI：三平台 unittest 矩阵 + gitleaks
 ├── .gitleaks.toml                    ← 密钥扫描规则（同时作为 pre-commit hook）
 ├── tests/                            ← 仓库级 unittest 测试套（密钥库、凭据、安全防护等）
+├── docs/authentication/              ← 认证参考手册（同步自 sap-functional-skill）
 └── skills/
     ├── sap-adt-cli/             ← ADT CLI 工具与 Skill（源码位于本仓库）
     ├── abap-code-review/        ← ABAP 代码审查 Skill

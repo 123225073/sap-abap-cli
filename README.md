@@ -102,6 +102,16 @@ A composable knowledge-base skill that turns any AI assistant into a SAP integra
 
 ---
 
+## Reference Documentation
+
+Cross-project guides live under [`docs/`](docs/), independent of any single skill:
+
+| Document | Description |
+|---|---|
+| [`docs/authentication/`](docs/authentication/) | Authentication playbook for SAP↔AI integration (CLI / MCP / OData): decision tree, detailed pros/cons and step-by-step implementation for Basic, SPNEGO, X.509, OIDC/OAuth2, edge-gateway and client patterns. This is a synced copy; the authoritative version is maintained in the `sap-functional-skill` repository. |
+
+---
+
 ## Repository Structure
 
 ```
@@ -114,6 +124,7 @@ sap-engineering-skill/
 ├── .github/workflows/tests.yml       ← CI: 3-OS unittest matrix + gitleaks
 ├── .gitleaks.toml                    ← Secret-scan rules (also a pre-commit hook)
 ├── tests/                            ← Root-level unittest suite (keystore, credentials, security…)
+├── docs/authentication/              ← Auth playbook (synced copy of sap-functional-skill)
 └── skills/
     ├── sap-adt-cli/             ← ADT CLI tool & skill (source in this repo)
     ├── abap-code-review/        ← ABAP code review skill
